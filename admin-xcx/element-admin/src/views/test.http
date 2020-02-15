@@ -1,0 +1,100 @@
+@url=http://localhost:1000
+
+
+###post
+POST {{url}}/Article
+//post方法时容易漏写这句
+Content-Type: application/json
+
+{
+    "title":"标题12",
+    "conntect":"内容12"
+}
+
+###get
+GET {{url}}
+
+###get
+GET {{url}}/Article
+
+
+###delete
+DELETE {{url}}/Article/5df6653e3d0d8404e441ed2a
+
+
+# 修改
+###put
+PUT  {{url}}/Article/5e1c89f7f7ba5d31188a9e33
+Content-Type: application/json
+
+{
+    "_id": "5e1c89f7f7ba5d31188a9e33",
+    "url": "http://localhost:8081/public/img/local/4.jpg",
+    "pro_name": "属性1",
+    "text": "商品1",
+    "num": 1,
+    "selected": true,
+    "price": "100",
+    "__v": 0
+}
+
+
+###get
+GET {{url}}/1/Article
+
+
+
+//轮播sliderList
+###get
+GET {{url}}/sliderList
+
+
+###delete
+DELETE  {{url}}/sliderList/5df0f0d5c4e71037ccb6c348
+
+
+###put
+PUT  {{url}}/sliderList/5df770072842a00778dd67bb
+Content-Type: application/json
+
+{
+    "text": "轮播图片3",
+    "url": "http://localhost:8081/public/img/local/3.jpg"
+}
+
+
+//首页中间页centerList
+###get
+GET {{url}}/centerList
+
+###put
+PUT  {{url}}/centerList/5df7808c2af5ac0f0885cbea
+Content-Type: application/json
+
+{
+    "text": "center图片1",
+    "url": "http://localhost:8081/public/img/local/1.jpg"
+}
+
+
+#订单页buyList
+###get
+GET {{url}}/buyList
+
+
+###delete
+DELETE {{url}}/buyList/5df493049536963b581fd9f6
+
+//User
+###get
+GET {{url}}/User
+
+###delete
+DELETE {{url}}/User/5de7d4cf07929c436c87901c
+
+
+###post
+POST {{url}}/UserLogin/
+
+###post
+POST {{url}}/search/
